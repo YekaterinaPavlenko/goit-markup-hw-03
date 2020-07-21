@@ -26,23 +26,36 @@ body {
     color: var(--primary-text-color);
     font-family: Roboto, sans-serif;  
 }
-
+.outline {
+    outline: 1px solid red;
+}
 a {
     text-decoration: none;
 }
 
 .list {
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .box {
     outline: 2px solid violet ;
 }
+
+.conteiner {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
 /* Студия-главная страница */
 
 /* лого - верхняя линия */
 
 .logo {
+    margin-top: 0;
+
     color: var(--primary-black-color);
 
     font-family: Raleway;  
@@ -101,9 +114,11 @@ a {
 .hero {
     color: var(--primary-white-color);
     background-color: var(--hero-bcg-color);
+    text-align: center;
 }
 
 .hero-title {
+    margin: 0;
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
@@ -112,9 +127,14 @@ a {
     text-transform: uppercase;
 }
 
-.button.primary {
+.button.primary { 
+    display: inline-block;
+    padding: 10px 32px;
+    min-width: 200px;
+
     color: var(--primary-white-color);
     background-color: var(--accent-color);
+    border-color: var(--accent-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
 
@@ -123,12 +143,14 @@ a {
     font-size: 16px;
     line-height: 1.87;
     letter-spacing: 0.06em;
+    cursor: pointer;
 
 }
 
 /* Общие  стили для секций*/
 
 .section-title {
+    margin: 0;
     color: var(--title-text-color);
 
     font-weight: 700;
@@ -145,7 +167,6 @@ a {
 .social-link:hover,
 .social-link:focus {
     color: var(--accent-color);
-
 }
 
 /*  секция Особенности */
@@ -160,6 +181,7 @@ a {
 }
 
 .features-text {
+    margin: 0;
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
@@ -168,6 +190,7 @@ a {
 /* секция-Чем мы занимаемся */
 
 .example-text {
+    margin: 0;
     color: var(--primary-white-color);
     background-color: rgba(47, 48, 58, 0.8);
 
@@ -186,6 +209,7 @@ a {
 }
 
 .team-title {  
+    
     color: var(--title-text-color); 
 
     font-weight: 500;
@@ -211,6 +235,7 @@ a {
 
 .logo.footer {
     color: var(--primary-white-color);
+    margin-top: 0;
 }
 
 .address-text {
@@ -241,15 +266,21 @@ b {
 /* Портфолио*/
 
 .button.secondary {
+    display: inline-block;
+    min-width: 73px;
+    padding: 6px 22px;
+    border-radius: 4px;
+    border: 2px solid #F5F4FA;
+
     color: var(--title-text-color);
     background-color: #F5F4FA;
-    border-radius: 4px;
 
     font-family: Roboto, sans-serif;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.62;
     letter-spacing: 0.03em;
+    cursor: pointer;
 }
 
 .button.secondary:hover,
@@ -268,6 +299,7 @@ b {
 }
 
 .text-card {
+    margin-bottom: 0;
     color: var(--primary-text-color);
 
     font-size: 16px;
