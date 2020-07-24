@@ -33,14 +33,13 @@ a {
     text-decoration: none;
 }
 
+img {
+    display: block;
+}
 .list {
     list-style: none;
     margin: 0;
     padding: 0;
-}
-
-.box {
-    outline: 2px solid violet ;
 }
 
 .conteiner {
@@ -49,12 +48,24 @@ a {
     padding: 0 15px;
 }
 
+
 /* Студия-главная страница */
 
 /* лого - верхняя линия */
+.header {
+    display: flex;
+    align-items: center;
+    padding: 24px 0;
+    height: 80px;
+    
+}
+.navigation {
+    display: flex;
+    margin-right: 305px;
+}
 
 .logo {
-    margin-top: 0;
+    margin: 0;
 
     color: var(--primary-black-color);
 
@@ -71,14 +82,24 @@ a {
 
 /* верхняя линия-навигация сайта */
 
+.nav {
+    display: flex;
+    align-items: center;
+    margin: 0 0 0 85px;
+}
+.nav-item:not(:last-child) {
+    margin-right: 50px;
+}
+
 .nav-link {
     color: var(--title-text-color);
 
     font-family: Roboto, sans-serif;
+    font-style: normal;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
-    letter-spacing: 0.02em; 
+    letter-spacing: 0.02em;
 }
 
 .nav-link:hover,
@@ -90,8 +111,11 @@ a {
     color: var(--accent-color);
 }
 
-.link-mail,
-.link-tel {
+.contact {
+    display: flex;
+}
+
+.link-contact {
     color: var(--primary-text-color);
 
     font-family: Roboto, sans-serif;
@@ -102,10 +126,8 @@ a {
     letter-spacing: 0.02em;    
 }
 
-.link-mail:hover,
-.link-mail:focus,
-.link-tel:hover,
-.link-tel:focus {
+.link-contact:hover,
+.link-contact:focus {
     color: var(--accent-color);
 }
 
@@ -117,8 +139,17 @@ a {
     text-align: center;
 }
 
+.hero-box {
+   padding: 200px;
+}
 .hero-title {
-    margin: 0;
+    width: 696px;
+    height: 120px;
+    margin-top: 0;
+    margin-bottom: 30px;
+    margin-right: auto;
+    margin-left: auto;
+    
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
@@ -129,8 +160,12 @@ a {
 
 .button.primary { 
     display: inline-block;
-    padding: 10px 32px;
     min-width: 200px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 32px;
+    padding-left: 32px;
+    
 
     color: var(--primary-white-color);
     background-color: var(--accent-color);
@@ -144,13 +179,34 @@ a {
     line-height: 1.87;
     letter-spacing: 0.06em;
     cursor: pointer;
-
 }
 
 /* Общие  стили для секций*/
+.box {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
 
+.box.first {
+    padding-bottom: 0;
+}
+.list-box {
+    display: flex;
+}
+.item-box {
+    width: calc((100% - 30px*3)/4);
+    margin-right: 30px;
+}
+.item-box:last-child {
+    margin-right: 0;
+}
+.img-box {
+    padding: 25px 100px;
+    margin-bottom: 30px;
+}
 .section-title {
     margin: 0;
+    margin-bottom: 50px;
     color: var(--title-text-color);
 
     font-weight: 700;
@@ -171,8 +227,13 @@ a {
 
 /*  секция Особенности */
 
+.features {
+
+}
 .features-title {
     color: var(--title-text-color);
+    margin: 0;
+    margin-bottom: 10px;
 
     font-size: 14px;
     line-height: 1.14;
@@ -188,9 +249,15 @@ a {
 }
 
 /* секция-Чем мы занимаемся */
-
+.example-box {
+    width: calc((100% - 30px*2)/3);
+    margin-right: 30px;
+}
+.example-box:last-child {
+    margin-right: 0;
+}
 .example-text {
-    margin: 0;
+    margin: 0; 
     color: var(--primary-white-color);
     background-color: rgba(47, 48, 58, 0.8);
 
@@ -268,7 +335,10 @@ b {
 .button.secondary {
     display: inline-block;
     min-width: 73px;
-    padding: 6px 22px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-right: 22px;
+    padding-left: 22px;
     border-radius: 4px;
     border: 2px solid #F5F4FA;
 
