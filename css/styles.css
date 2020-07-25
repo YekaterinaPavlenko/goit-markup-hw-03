@@ -26,9 +26,7 @@ body {
     color: var(--primary-text-color);
     font-family: Roboto, sans-serif;  
 }
-.outline {
-    outline: 1px solid red;
-}
+
 a {
     text-decoration: none;
 }
